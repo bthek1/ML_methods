@@ -5,18 +5,28 @@
 This file will become your README and also the index of your
 documentation.
 
-## Install
+## Step for git push
+
+- nbdev_prepare
+
+``` sh
+nbdev_prepare
+```
+
+- Git stuff
+
+``` sh
+git add .
+git commit -m "update"
+git push
+```
+
+## After changing dependencies
 
 ``` sh
 pip install ML
 ```
 
-## How to use
-
-Fill me in please! Don’t forget code examples:
-
-``` python
-1+1
+``` sh
+pip install -e '.[dev]'
 ```
-
-    2
