@@ -1,0 +1,18 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 01_K-NN.ipynb
+      - 02_DecisionTree.ipynb
+      - 03_LinearRegression.ipynb
+      - 04_LogisticRegression.ipynb
+      - 05_PolynomialRegression.ipynb
+      - 06_CrossEntropy.ipynb
+      - 07_Regularisation.ipynb
+      - 08_ParameterOptimization.ipynb
+      - 09_BackPropagation-Copy1.ipynb
+      - 10_CNNs.ipynb
+      - 11_Ensemble.ipynb
+      - 12_Kernals.ipynb
+      - 13_Bayesian.ipynb
+      - 14_Generative.ipynb

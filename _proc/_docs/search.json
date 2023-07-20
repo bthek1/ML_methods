@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "k-nn.html",
+    "href": "k-nn.html",
+    "title": "K-NN",
+    "section": "",
+    "text": "source\n\nsayhello\n\n sayhello (name)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ML",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#step-for-git-push",
+    "href": "index.html#step-for-git-push",
+    "title": "ML",
+    "section": "Step for git push",
+    "text": "Step for git push\n\nnbdev_prepare\n\nnbdev_prepare\n\nGit stuff\n\ngit add .\ngit commit -m \"update\"\ngit push"
+  },
+  {
+    "objectID": "index.html#after-changing-dependencies",
+    "href": "index.html#after-changing-dependencies",
+    "title": "ML",
+    "section": "After changing dependencies",
+    "text": "After changing dependencies\npip install ML\npip install -e '.[dev]'"
+  }
+]
