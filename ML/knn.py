@@ -91,46 +91,46 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     test_size=0.2,
                                                     random_state=1)
 
-# %% ../nbs/01_K-NN.ipynb 29
+# %% ../nbs/01_K-NN.ipynb 30
 len(X_train)
 
-# %% ../nbs/01_K-NN.ipynb 30
+# %% ../nbs/01_K-NN.ipynb 31
 len(X_test)
 
-# %% ../nbs/01_K-NN.ipynb 32
+# %% ../nbs/01_K-NN.ipynb 33
 from sklearn.neighbors import KNeighborsClassifier
 
-# %% ../nbs/01_K-NN.ipynb 33
+# %% ../nbs/01_K-NN.ipynb 34
 n_neighbors=10
 knn = KNeighborsClassifier(n_neighbors)
 knn.fit(X_train, y_train)
 
-# %% ../nbs/01_K-NN.ipynb 34
+# %% ../nbs/01_K-NN.ipynb 35
 knn.score(X_test, y_test)
 
-# %% ../nbs/01_K-NN.ipynb 35
+# %% ../nbs/01_K-NN.ipynb 36
 knn.predict([[4.8,3.0,1.5,0.3]])
 
-# %% ../nbs/01_K-NN.ipynb 36
+# %% ../nbs/01_K-NN.ipynb 37
 from sklearn.metrics import confusion_matrix
 
-# %% ../nbs/01_K-NN.ipynb 37
+# %% ../nbs/01_K-NN.ipynb 38
 y_pred = knn.predict(X_test)
 cm = confusion_matrix(y_test, y_pred)
 cm
 
-# %% ../nbs/01_K-NN.ipynb 39
+# %% ../nbs/01_K-NN.ipynb 40
 import matplotlib.pyplot as plt
 import seaborn as sn
 
-# %% ../nbs/01_K-NN.ipynb 40
+# %% ../nbs/01_K-NN.ipynb 41
 plt.figure(figsize=(7,5))
 sn.heatmap(cm, annot=True)
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
 
-# %% ../nbs/01_K-NN.ipynb 41
+# %% ../nbs/01_K-NN.ipynb 42
 from sklearn.metrics import classification_report
 
-# %% ../nbs/01_K-NN.ipynb 42
+# %% ../nbs/01_K-NN.ipynb 43
 print(classification_report(y_test, y_pred))

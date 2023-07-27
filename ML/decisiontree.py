@@ -3,11 +3,11 @@
 # %% auto 0
 __all__ = ['fig', 'ax', 'scatter', 'cbar']
 
-# %% ../nbs/02_DecisionTree.ipynb 15
+# %% ../nbs/02_DecisionTree.ipynb 16
 import matplotlib.pyplot as plt
 import numpy as np
 
-# %% ../nbs/02_DecisionTree.ipynb 18
+# %% ../nbs/02_DecisionTree.ipynb 19
 # Create a 3D scatter plot
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
