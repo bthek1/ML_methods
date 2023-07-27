@@ -7,49 +7,49 @@ __all__ = ['iris', 'df', 'df0', 'df1', 'df2', 'X', 'y', 'X_train', 'X_test', 'y_
 # %% ../nbs/01_K-NN.ipynb 2
 def sayhello(name): return f'Hello {name}'
 
-# %% ../nbs/01_K-NN.ipynb 5
+# %% ../nbs/01_K-NN.ipynb 9
 import pandas as pd
 from sklearn.datasets import load_iris
 
-# %% ../nbs/01_K-NN.ipynb 6
+# %% ../nbs/01_K-NN.ipynb 10
 iris = load_iris()
 
-# %% ../nbs/01_K-NN.ipynb 7
+# %% ../nbs/01_K-NN.ipynb 11
 iris.feature_names
 
-# %% ../nbs/01_K-NN.ipynb 8
+# %% ../nbs/01_K-NN.ipynb 12
 iris.target_names
 
-# %% ../nbs/01_K-NN.ipynb 9
+# %% ../nbs/01_K-NN.ipynb 13
 iris.target
 
-# %% ../nbs/01_K-NN.ipynb 10
+# %% ../nbs/01_K-NN.ipynb 14
 df = pd.DataFrame(iris.data,columns=iris.feature_names)
 df.head()
 
-# %% ../nbs/01_K-NN.ipynb 11
+# %% ../nbs/01_K-NN.ipynb 15
 df['target'] = iris.target
 df.head()
 
-# %% ../nbs/01_K-NN.ipynb 12
+# %% ../nbs/01_K-NN.ipynb 16
 df[df.target==1].head()
 
-# %% ../nbs/01_K-NN.ipynb 13
+# %% ../nbs/01_K-NN.ipynb 17
 df[df.target==2].head()
 
-# %% ../nbs/01_K-NN.ipynb 14
+# %% ../nbs/01_K-NN.ipynb 18
 df['flower_name'] =df.target.apply(lambda x: iris.target_names[x])
 df.head()
 
-# %% ../nbs/01_K-NN.ipynb 15
+# %% ../nbs/01_K-NN.ipynb 19
 df0 = df[:50]
 df1 = df[50:100]
 df2 = df[100:]
 
-# %% ../nbs/01_K-NN.ipynb 17
+# %% ../nbs/01_K-NN.ipynb 21
 import matplotlib.pyplot as plt
 
-# %% ../nbs/01_K-NN.ipynb 18
+# %% ../nbs/01_K-NN.ipynb 22
 plt.xlabel('Sepal Length')
 plt.ylabel('Sepal Width')
 plt.scatter(df0['sepal length (cm)'],
@@ -64,7 +64,7 @@ plt.scatter(df2['sepal length (cm)'],
             df2['sepal width (cm)'],
             color="red",marker='*')
 
-# %% ../nbs/01_K-NN.ipynb 19
+# %% ../nbs/01_K-NN.ipynb 23
 plt.xlabel('Petal Length')
 plt.ylabel('Petal Width')
 plt.scatter(df0['petal length (cm)'],
@@ -79,58 +79,58 @@ plt.scatter(df2['sepal length (cm)'],
             df2['sepal width (cm)'],
             color="red",marker='*')
 
-# %% ../nbs/01_K-NN.ipynb 21
+# %% ../nbs/01_K-NN.ipynb 25
 from sklearn.model_selection import train_test_split
 
-# %% ../nbs/01_K-NN.ipynb 22
+# %% ../nbs/01_K-NN.ipynb 26
 X = df.drop(['target','flower_name'], axis='columns')
 y = df.target
 
-# %% ../nbs/01_K-NN.ipynb 23
+# %% ../nbs/01_K-NN.ipynb 27
 X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     test_size=0.2,
                                                     random_state=1)
 
-# %% ../nbs/01_K-NN.ipynb 25
+# %% ../nbs/01_K-NN.ipynb 29
 len(X_train)
 
-# %% ../nbs/01_K-NN.ipynb 26
+# %% ../nbs/01_K-NN.ipynb 30
 len(X_test)
 
-# %% ../nbs/01_K-NN.ipynb 28
+# %% ../nbs/01_K-NN.ipynb 32
 from sklearn.neighbors import KNeighborsClassifier
 
-# %% ../nbs/01_K-NN.ipynb 29
+# %% ../nbs/01_K-NN.ipynb 33
 n_neighbors=10
 knn = KNeighborsClassifier(n_neighbors)
 knn.fit(X_train, y_train)
 
-# %% ../nbs/01_K-NN.ipynb 30
+# %% ../nbs/01_K-NN.ipynb 34
 knn.score(X_test, y_test)
 
-# %% ../nbs/01_K-NN.ipynb 31
+# %% ../nbs/01_K-NN.ipynb 35
 knn.predict([[4.8,3.0,1.5,0.3]])
 
-# %% ../nbs/01_K-NN.ipynb 32
+# %% ../nbs/01_K-NN.ipynb 36
 from sklearn.metrics import confusion_matrix
 
-# %% ../nbs/01_K-NN.ipynb 33
+# %% ../nbs/01_K-NN.ipynb 37
 y_pred = knn.predict(X_test)
 cm = confusion_matrix(y_test, y_pred)
 cm
 
-# %% ../nbs/01_K-NN.ipynb 35
+# %% ../nbs/01_K-NN.ipynb 39
 import matplotlib.pyplot as plt
 import seaborn as sn
 
-# %% ../nbs/01_K-NN.ipynb 36
+# %% ../nbs/01_K-NN.ipynb 40
 plt.figure(figsize=(7,5))
 sn.heatmap(cm, annot=True)
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
 
-# %% ../nbs/01_K-NN.ipynb 37
+# %% ../nbs/01_K-NN.ipynb 41
 from sklearn.metrics import classification_report
 
-# %% ../nbs/01_K-NN.ipynb 38
+# %% ../nbs/01_K-NN.ipynb 42
 print(classification_report(y_test, y_pred))
