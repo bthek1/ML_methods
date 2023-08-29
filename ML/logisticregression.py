@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 
 
 # %% ../nbs/04_LogisticRegression.ipynb 6
-df = pd.read_csv("./Data/insurance_data.csv")
+df = pd.read_csv('./Data/insurance_data.csv')
 df.head()
 
 # %% ../nbs/04_LogisticRegression.ipynb 8
