@@ -35,8 +35,14 @@ inputs['company_n'] = le_company.fit_transform(inputs['company'])
 inputs['job_n'] = le_job.fit_transform(inputs['job'])
 inputs['degree_n'] = le_degree.fit_transform(inputs['degree'])
 
+# %% ../nbs/02_DecisionTree.ipynb 14
+inputs
+
 # %% ../nbs/02_DecisionTree.ipynb 15
 inputs_n = inputs.drop(['company','job','degree'],axis='columns')
+
+# %% ../nbs/02_DecisionTree.ipynb 16
+inputs_n
 
 # %% ../nbs/02_DecisionTree.ipynb 17
 import matplotlib.pyplot as plt
@@ -73,6 +79,9 @@ scatter = ax.scatter(inputs_n['degree_n'],
 # Adding a color bar to show the mapping of colors to values in 'color_column'
 cbar = fig.colorbar(scatter, ax=ax)
 cbar.set_label('Color Column')
+
+# %% ../nbs/02_DecisionTree.ipynb 21
+target
 
 # %% ../nbs/02_DecisionTree.ipynb 22
 from sklearn import tree

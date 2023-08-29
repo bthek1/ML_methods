@@ -7,4 +7,6 @@ d = { 'settings': { 'branch': 'main',
                 'lib_path': 'ML'},
   'syms': { 'ML.core': {'ML.core.foo': ('core.html#foo', 'ML/core.py')},
             'ML.decisiontree': {},
-            'ML.knn': {'ML.knn.sayhello': ('k-nn.html#sayhello', 'ML/knn.py')}}}
+            'ML.knn': {'ML.knn.sayhello': ('k-nn.html#sayhello', 'ML/knn.py')},
+            'ML.linearregression': {},
+            'ML.logisticregression': {}}}
