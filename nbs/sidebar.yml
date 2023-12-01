@@ -4,15 +4,22 @@ website:
       - index.ipynb
       - 01_K-NN.ipynb
       - 02_DecisionTree.ipynb
+      - 031_LinearRegression_Multivariate.ipynb
       - 03_LinearRegression.ipynb
       - 04_LogisticRegression.ipynb
       - 05_PolynomialRegression.ipynb
       - 06_CrossEntropy.ipynb
-      - 07_Regularisation.ipynb
-      - 08_ParameterOptimization.ipynb
-      - 09_BackPropagation-Copy1.ipynb
+      - 07_L1 and L2 Regularization-Copy1.ipynb
+      - 08_HyperParameterOptimization.ipynb
+      - 09_BackPropagation.ipynb
       - 10_CNNs.ipynb
       - 11_Ensemble.ipynb
       - 12_Kernals.ipynb
       - 13_Bayesian.ipynb
       - 14_Generative.ipynb
+      - 15_SVR.ipynb
+      - 16_RandomForest.ipynb
+      - 17_PCA.ipynb
+      - 18_Loss_or_Cost_funtions-Copy1.ipynb
+      - 19_Tools.ipynb
+      - pivottablejs.html
