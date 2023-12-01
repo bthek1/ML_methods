@@ -8,8 +8,7 @@ format:
       dark: darkly
     css: styles.css
     toc: true
-
-
+    
 website:
   title: "ML"
   image: "bird.jpg"
@@ -54,10 +53,12 @@ website:
         menu:
         - text: "Documentation"
           href: https://bthek1.github.io/webdevelopment_doc/
-        - text: "React"
-          href: https://bthek1.github.io/webdevelopment_doc/React/react.html
-        - text: "Django"
-          href: https://bthek1.github.io/webdevelopment_doc/django.html
+          
+      - text: "Nbdev Automation"
+        menu:
+        - text: "Automation lib"
+          href: https://bthek1.github.io/nbdevAuto/
+          
       - text: "Help"
         menu:
           - text: "Report a Bug"
