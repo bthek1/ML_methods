@@ -2,10 +2,11 @@ website:
   sidebar:
     contents:
       - index.ipynb
+      - 00_train_test_split.ipynb
       - 01_K-NN.ipynb
       - 02_DecisionTree.ipynb
+      - 030_LinearRegression.ipynb
       - 031_LinearRegression_Multivariate.ipynb
-      - 03_LinearRegression.ipynb
       - 04_LogisticRegression.ipynb
       - 05_PolynomialRegression.ipynb
       - 06_CrossEntropy.ipynb
@@ -13,13 +14,15 @@ website:
       - 08_HyperParameterOptimization.ipynb
       - 09_BackPropagation.ipynb
       - 10_CNNs.ipynb
-      - 11_Ensemble.ipynb
+      - 110_Ensemble.ipynb
+      - 111_bagging_heart_disease_prediction.ipynb
       - 12_Kernals.ipynb
-      - 13_Bayesian.ipynb
+      - 130_Bayesian.ipynb
+      - 131_Naive_Bayes_2_email_spam_filter.ipynb
       - 14_Generative.ipynb
-      - 15_SVR.ipynb
-      - 16_RandomForest.ipynb
-      - 17_PCA.ipynb
-      - 18_Loss_or_Cost_funtions-Copy1.ipynb
-      - 19_Tools.ipynb
+      - 15_SVM.ipynb
+      - 16_Random_forest.ipynb
+      - 170_PCA.ipynb
+      - 171_PCA_heart_disease_prediction.ipynb
+      - 18_Loss_or_Cost_funtions.ipynb
       - pivottablejs.html
