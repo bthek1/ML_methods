@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MLexamples"
+dynamic = ["version"]
+description = "Machine Learning"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Apache-2.0"}
+authors = [{name = "Benedict Thekkel", email = "bthekkel1@gmail.com"}]
+keywords = ['nbdev', 'jupyter', 'notebook', 'python']
+classifiers = ["Natural Language :: English", "Intended Audience :: Developers", "Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+dependencies = ['jupyter', 'jupyterlab', 'nbdev', 'jupyterlab-quarto', 'seaborn', 'scikit-learn', 'pandas', 'matplotlib', 'plotly', 'opencv-python', 'fastai']
+
+[project.urls]
+Repository = "https://github.com/bthek1/ML"
+Documentation = "https://bthek1.github.io/ML"
+
+[project.entry-points.nbdev]
+ML = "ML._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "ML.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["ML"]
+
+[tool.nbdev]
+jupyter_hooks = true
