@@ -7,3 +7,8 @@ website:
   description: "Machine Learning"
   repo-branch: main
   repo-url: "https://github.com/bthek1/ML"
+
+format-links:
+  - html
+  - format: commonmark
+    text: Markdown
