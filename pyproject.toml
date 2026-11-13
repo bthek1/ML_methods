@@ -28,4 +28,5 @@ version = {attr = "ML.__version__"}
 include = ["ML"]
 
 [tool.nbdev]
+custom_sidebar = true
 jupyter_hooks = true
